@@ -5228,7 +5228,7 @@ MonoBehaviour:
   buildingParent: {fileID: 0}
   curCursorPos: {x: 0, y: 0, z: 0}
   buildingCursor: {fileID: 0}
-  gridPlane: {fileID: 0}
+  gridPlane: {fileID: 596625172}
   _curStructure: {fileID: 0}
   structurePrefab: []
 --- !u!114 &1579079769
