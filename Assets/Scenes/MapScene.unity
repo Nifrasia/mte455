@@ -438,7 +438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 841/1000
+  m_text: 841/1k
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1495349175, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
+  m_Sprite: {fileID: 1244209968, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 455/1000
+  m_text: 455/1k
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1014780482, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
+  m_Sprite: {fileID: 1905026621, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1660,7 +1660,7 @@ GameObject:
   - component: {fileID: 630104887}
   - component: {fileID: 630104886}
   m_Layer: 5
-  m_Name: Log
+  m_Name: MIlk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 210/500
+  m_text: 210/1k
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -1919,7 +1919,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -740107305, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
+  m_Sprite: {fileID: 899791901, guid: 9e48fbaf90af4ef41bea162252ea8369, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2387,7 +2387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Edit Mode
+  m_text: Demolish
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -2464,6 +2464,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794625695}
   m_CullTransparentMesh: 1
+--- !u!1 &827605295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827605296}
+  m_Layer: 0
+  m_Name: Office
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &827605296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827605295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1052.3763, y: 227.26457, z: 1473.0189}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1633793682}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832409893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,7 +2646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '15,203
+  m_text: '15.2k
 
 '
   m_isRightToLeft: 0
@@ -2705,6 +2737,7 @@ GameObject:
   - component: {fileID: 933418477}
   - component: {fileID: 933418476}
   - component: {fileID: 933418475}
+  - component: {fileID: 933418479}
   m_Layer: 5
   m_Name: MainUI
   m_TagString: Untagged
@@ -2797,6 +2830,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &933418479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933418474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83059994d0c2de542a681afb3e4f7427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 858127077}
+  staffText: {fileID: 1147191631}
+  wheatText: {fileID: 1006522779}
+  melonText: {fileID: 262306148}
+  cornText: {fileID: 649870711}
+  milkText: {fileID: 2039682773}
+  appleText: {fileID: 104307365}
+  dayText: {fileID: 610318846}
 --- !u!1 &972781360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1361092453, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
+  m_Sprite: {fileID: -1365618258, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2977,7 +3030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 562/1000
+  m_text: 562/1k
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -3222,7 +3275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Station
+  m_text: Ranch
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -3403,7 +3456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1281842504, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
+  m_Sprite: {fileID: 981983731, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3479,7 +3532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Destroy
+  m_text: Sell
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -3672,7 +3725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1408152158, guid: 9e48fbaf90af4ef41bea162252ea8369, type: 3}
+  m_Sprite: {fileID: 1204759287, guid: 9e48fbaf90af4ef41bea162252ea8369, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3748,7 +3801,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -803796035, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
+  m_Sprite: {fileID: -836555939, guid: 9e48fbaf90af4ef41bea162252ea8369, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3990,7 +4043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -98161079, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
+  m_Sprite: {fileID: 1819102755, guid: 9e48fbaf90af4ef41bea162252ea8369, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4188,7 +4241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1795747269, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
+  m_Sprite: {fileID: 1204759287, guid: 9e48fbaf90af4ef41bea162252ea8369, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4372,7 +4425,7 @@ GameObject:
   - component: {fileID: 1264494312}
   - component: {fileID: 1264494311}
   m_Layer: 5
-  m_Name: Coal
+  m_Name: Melon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5045,7 +5098,7 @@ GameObject:
   - component: {fileID: 1546380110}
   - component: {fileID: 1546380109}
   m_Layer: 5
-  m_Name: Plank
+  m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5267,6 +5320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7b0aa5b9bc6dd4eb3153fff3d370cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  day: 0
 --- !u!1 &1608906409
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,7 +5333,7 @@ GameObject:
   - component: {fileID: 1608906412}
   - component: {fileID: 1608906411}
   m_Layer: 5
-  m_Name: Mineral
+  m_Name: Corn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5480,6 +5534,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628704841}
   m_CullTransparentMesh: 1
+--- !u!1 &1633793681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633793682}
+  m_Layer: 0
+  m_Name: HiredStaff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633793682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633793681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 827605296}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858580459
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,7 +5700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -790951728, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
+  m_Sprite: {fileID: -950815595, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5645,7 +5730,7 @@ GameObject:
   - component: {fileID: 1889153452}
   - component: {fileID: 1889153451}
   m_Layer: 5
-  m_Name: Worker
+  m_Name: Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5769,7 +5854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -690118533, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
+  m_Sprite: {fileID: -1823236737, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6051,7 +6136,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 110/5000
+  m_text: 110/1k
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
@@ -6140,7 +6225,7 @@ GameObject:
   - component: {fileID: 2050439523}
   - component: {fileID: 2050439522}
   m_Layer: 5
-  m_Name: Bread
+  m_Name: Wheat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6310,7 +6395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1382077173, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
+  m_Sprite: {fileID: 1281842504, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6386,7 +6471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hunting
+  m_text: Hiring
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da518b29f52d12c4785731801b5f35bb, type: 2}
   m_sharedMaterial: {fileID: 4111765564502298775, guid: da518b29f52d12c4785731801b5f35bb, type: 2}

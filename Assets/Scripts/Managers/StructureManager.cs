@@ -53,6 +53,9 @@ public class StructureManager : MonoBehaviour
 
     public void BeginNewBuildingPlacement(GameObject prefab)
     {
+        if (CheckMoney(prefab) == false)
+            return;
+
         isDemolishing = false;
         isConstructing = true;
 
@@ -97,5 +100,19 @@ public class StructureManager : MonoBehaviour
 
         if (ghostBuilding != null)
             Destroy(ghostBuilding);
+    }
+    private bool CheckMoney(GameObject obj)
+    {
+        int cost = obj.GetComponent<Structure>().CostToBuild;
+
+        if (cost <= Office.instance.Money)
+            return true;
+        else
+            return false;
+    }
+    private void DeductMoney(int cost)
+    {
+        Office.instance.Money -= cost;
+        MainUI.instance.UpdateResourceUI();
     }
 }
