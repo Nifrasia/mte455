@@ -208,7 +208,7 @@ MonoBehaviour:
   functional: 0
   structureName: 
   hp: 0
-  costToBuild: 0
+  costToBuild: 1800
   id: 0
   stage: 0
   maxStaffNum: 3
