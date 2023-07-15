@@ -80,7 +80,7 @@ public class Office : MonoBehaviour
         AddStaff(w);
 
         //Update UI
-        MainUI.instance.UpdateMoneyText(money);
+        MainUI.instance.UpdateResourceUI();
 
         return true;
     }

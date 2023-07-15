@@ -81,7 +81,12 @@ public class StructureManager : MonoBehaviour
         Structure s = structureObj.GetComponent<Structure>();
 
         //Add building in Office
+        Office.instance.AddBuilding(s);
         //Deduct Money
+        DeductMoney(s.CostToBuild);
+        //Cancel if there is not enough money
+        if (CheckMoney(structureObj) == false)
+            CancelStructureMode();
     }
     private void CheckLeftClick()
     {
