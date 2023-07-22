@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3637267f6d11d469ec5a236139778d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureType: 2
+  structureType: 3
   functional: 0
   structureName: MelonFarm
   hp: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
   id: 1
   stage: 0
   maxStaffNum: 3
-  dayRequired: 5
+  dayRequired: 2
   dayPassed: 0
   produceTimer: 0
   FarmUI: {fileID: 0}
