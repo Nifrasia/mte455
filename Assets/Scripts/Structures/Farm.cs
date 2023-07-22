@@ -13,6 +13,7 @@ public enum FarmStage
 public class Farm : Structure
 {
     [SerializeField] private FarmStage stage = FarmStage.plowing;
+    public FarmStage Stage { get { return stage; } }
 
     [SerializeField] private int maxStaffNum = 3;
     public int MaxStaffNum { get { return maxStaffNum; } set { maxStaffNum = value; } }
@@ -22,6 +23,9 @@ public class Farm : Structure
 
     [SerializeField] private float produceTimer = 0f;
     private int secondsPerDay = 10;
+
+    private float WorkTimer = 0f; //Timer for workers
+    private float WorkTimeWait = 1f;
 
     [SerializeField] private GameObject FarmUI;
 
@@ -81,6 +85,25 @@ public class Farm : Structure
 
             hp = 1;
             stage = FarmStage.sowing;
+        }
+    }
+    public void AddStaffToFarm(Worker w)
+    {
+        currentWorkers.Add(w);
+    }
+    private void Working()
+    {
+        hp += 3;
+    }
+
+    public void CheckTimeForWork()
+    {
+        WorkTimer += Time.deltaTime;
+
+        if (WorkTimer >= WorkTimeWait)
+        {
+            WorkTimer = 0;
+            Working();
         }
     }
 }
