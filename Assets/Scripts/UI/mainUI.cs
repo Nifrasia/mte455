@@ -20,8 +20,7 @@ public class MainUI : MonoBehaviour
 
 
     [SerializeField] private TMP_Text farmNameText;
-    public TMP_Text FarmNameText
-    { get { return farmNameText; } set { farmNameText = value; } }
+    public TMP_Text FarmNameText { get { return farmNameText; } set { farmNameText = value; } }
 
     public static MainUI instance;
 

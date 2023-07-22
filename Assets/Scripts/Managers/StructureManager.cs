@@ -96,7 +96,10 @@ public class StructureManager : MonoBehaviour
             if (isConstructing)
                 PlaceBuilding(); //Real Construction
             else
-                CheckOpenPanel(); //Normal Mode
+            { Debug.Log(0); 
+               
+                CheckOpenPanel();
+            } //Normal Mode
         }
     }
     private void CancelStructureMode()
@@ -134,19 +137,21 @@ public class StructureManager : MonoBehaviour
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
+        Debug.Log(1);
         //if we left click something
-        if (Physics.Raycast(ray, out hit, 1000))
+        if (Physics.Raycast(ray, out hit, 10000))
         {
+            Debug.Log(2);
             //Mouse over UI
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
-
+            Debug.Log(3);
             CurStructure = hit.collider.gameObject;
-
+            Debug.Log(4);
             switch (hit.collider.tag)
             {
-                case "Farm": // if we click Object with Farm tag 
+                case "Farm": // if we click Object with Farm tag
+                    Debug.Log(5);
                     OpenFarmPanel();
                     break;
             }
