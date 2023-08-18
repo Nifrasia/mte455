@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,7 +60,7 @@ public class Worker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private float distance;
@@ -69,7 +70,8 @@ public class Worker : MonoBehaviour
 
     //Timer
     private float CheckStateTimer = 0f;
-    private float CheckStateTimeWait = 0.5f; 
+    private float CheckStateTimeWait = 0.5f;
+    [SerializeField] private GameObject[] tools;
 
     // Update is called once per frame
     void Update()
@@ -160,14 +162,17 @@ public class Worker : MonoBehaviour
             {
                 case FarmStage.plowing:
                     state = UnitState.Plow;
+                    EquipTool(0); //Hoe
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.sowing:
                     state = UnitState.Sow;
+                    EquipTool(1); //Sack
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.maintaining:
                     state = UnitState.Water;
+                    EquipTool(2); //Watering Can
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.harvesting:
@@ -176,5 +181,16 @@ public class Worker : MonoBehaviour
                     break;
             }
         }
+    }
+    private void DisableAllTools()
+    {
+        for (int i = 0; i < tools.Length; i++)
+            tools[i].SetActive(false);
+    }
+
+    private void EquipTool(int i)
+    {
+        DisableAllTools();
+        tools[i].SetActive(true);
     }
 }
