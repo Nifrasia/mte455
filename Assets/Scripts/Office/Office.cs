@@ -17,10 +17,8 @@ public class Office : MonoBehaviour
     }
     [SerializeField] private int money;
     public int Money { get { return money; } set { money = value; } }
-
     [SerializeField] private List<Worker> workers = new List<Worker>();
     public List<Worker> Workers { get { return workers; } }
-
     [SerializeField] private int wheat;
     public int Wheat { get { return wheat; } set { wheat = value; } }
     [SerializeField] private int melon;
@@ -47,6 +45,10 @@ public class Office : MonoBehaviour
     public GameObject SpawnPosition { get { return spawnPosition; } }
     [SerializeField] private GameObject rallyPosition;
 
+    [Header("Building")]
+    [SerializeField] private int unitLimit = 3; //Initial unit limit
+    [SerializeField] private int housingUnitNum = 6; //number of units per each housing
+
     public static Office instance;
 
     private void Awake()
@@ -57,17 +59,22 @@ public class Office : MonoBehaviour
     public void AddBuilding(Structure s)
     {
         structures.Add(s);
+        CheckHousing();
     }
 
     public void RemoveBuilding(Structure s)
     {
         structures.Remove(s);
         Destroy(s.gameObject);
+        CheckHousing();
     }
 
     public bool ToHireStaff(GameObject workerObj)
     {
         if (money <= 0)
+            return false;
+
+        if (workers.Count >= unitLimit)
             return false;
 
         workerObj.transform.parent = staffParent.transform;
@@ -161,5 +168,20 @@ public class Office : MonoBehaviour
         MainUI.instance.UpdateResourceUI();
 
         return true;
+    }
+    public void CheckHousing()
+    {
+        unitLimit = 3; //starting unit Limit
+
+        foreach (Structure s in structures)
+        {
+            if (s.IsHousing && s.IsHousing)
+                unitLimit += housingUnitNum;
+        }
+
+        if (unitLimit >= 100)
+            unitLimit = 100;
+        else if (unitLimit < 0)
+            unitLimit = 0;
     }
 }

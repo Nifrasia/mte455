@@ -243,7 +243,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 53782959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1579079768}
+        m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
+        m_MethodName: BeginNewBuildingPlacement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5564052159053978582, guid: 0cf7402d22cb8a64e9ee8d9aba114fba, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &53782959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,6 +784,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232469185}
   m_CullTransparentMesh: 1
+--- !u!1 &243099482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243099483}
+  m_Layer: 0
+  m_Name: RoadTileParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243099483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243099482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1579079767}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254573995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +2907,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 754886894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1579079768}
+        m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
+        m_MethodName: BeginNewBuildingPlacement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1701505253196039551, guid: 34dcba08c8936f746a4b0f5fcf375722, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &754886894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,6 +3288,8 @@ MonoBehaviour:
   staffParent: {fileID: 1633793681}
   spawnPosition: {fileID: 1495026105}
   rallyPosition: {fileID: 1614147339}
+  unitLimit: 3
+  housingUnitNum: 6
 --- !u!1 &832409893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6551,6 +6608,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2139520220}
+  - {fileID: 243099483}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6576,6 +6634,11 @@ MonoBehaviour:
   gridPlane: {fileID: 596625172}
   _curStructure: {fileID: 0}
   structurePrefab: []
+  roadGreenTilePrefab: {fileID: 4049327035865604732, guid: a1316671d4aca2f438628e444b078d4d, type: 3}
+  roadGreenTileParent: {fileID: 243099482}
+  startRoadPos: {x: 0, y: 0, z: 0}
+  endRoadPos: {x: 0, y: 0, z: 0}
+  roadGreenTilesList: []
 --- !u!114 &1579079769
 MonoBehaviour:
   m_ObjectHideFlags: 0
