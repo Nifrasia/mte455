@@ -53,7 +53,7 @@ public class Office : MonoBehaviour
 
     [Header("Building")]
     [SerializeField] private int unitLimit = 3; //Initial unit limit
-    public int UnitLimit { get { return unitLimit; } set { unitLimit = value; } }
+    public int UnitLimit { get { return unitLimit; }}
 
     [SerializeField] private int housingUnitNum = 6; //number of units per each housing
 
