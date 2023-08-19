@@ -17,16 +17,22 @@ public class Office : MonoBehaviour
     }
     [SerializeField] private int money;
     public int Money { get { return money; } set { money = value; } }
+
     [SerializeField] private List<Worker> workers = new List<Worker>();
     public List<Worker> Workers { get { return workers; } }
+
     [SerializeField] private int wheat;
     public int Wheat { get { return wheat; } set { wheat = value; } }
+
     [SerializeField] private int melon;
     public int Melon { get { return melon; } set { melon = value; } }
+
     [SerializeField] private int corn;
     public int Corn { get { return corn; } set { corn = value; } }
+
     [SerializeField] private int milk;
     public int Milk { get { return milk; } set { milk = value; } }
+
     [SerializeField] private int apple;
     public int Apple { get { return apple; } set { apple = value; } }
 
@@ -47,6 +53,8 @@ public class Office : MonoBehaviour
 
     [Header("Building")]
     [SerializeField] private int unitLimit = 3; //Initial unit limit
+    public int UnitLimit { get { return unitLimit; } set { unitLimit = value; } }
+
     [SerializeField] private int housingUnitNum = 6; //number of units per each housing
 
     public static Office instance;
