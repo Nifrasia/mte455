@@ -1,18 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
-public enum UnitState
-{
-    Idle,
-    Walk,
-    Plow,
-    Sow,
-    Water,
-    Harvest
-}
 
 public enum Gender
 {
@@ -20,10 +9,9 @@ public enum Gender
     female
 }
 
-public class Worker : MonoBehaviour
+public class Worker : Unit
 {
-
-    [SerializeField] private int id;
+    private int id;
     public int ID { get { return id; } set { id = value; } }
 
     [SerializeField] private int charSkinID;
@@ -45,79 +33,6 @@ public class Worker : MonoBehaviour
 
     [SerializeField] private bool hired = false;
     public bool Hired { get { return hired; } set { hired = value; } }
-
-    [SerializeField] private UnitState state;
-    public UnitState State { get { return state; } set { state = value; } }
-
-    private NavMeshAgent navAgent;
-    public NavMeshAgent NavAgent { get { return navAgent; } set { navAgent = value; } }
-
-    void Awake()
-    {
-        navAgent = GetComponent<NavMeshAgent>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    private float distance;
-
-    [SerializeField] private GameObject targetStructure;
-    public GameObject TargetStructure { get { return targetStructure; } set { targetStructure = value; } }
-
-    //Timer
-    private float CheckStateTimer = 0f;
-    private float CheckStateTimeWait = 0.5f;
-    [SerializeField] private GameObject[] tools;
-
-    // Update is called once per frame
-    void Update()
-    {
-        CheckStaffState();
-    }
-
-    private void CheckStaffState()
-    {
-        CheckStateTimer += Time.deltaTime;
-
-        if (CheckStateTimer >= CheckStateTimeWait)
-        {
-            CheckStateTimer = 0;
-            SwitchStaffState();
-        }
-    }
-
-    private void SwitchStaffState()
-    {
-        switch (state)
-        {
-            case UnitState.Walk:
-                WalkUpdate();
-                break;
-        }
-    }
-
-    private void WalkUpdate()
-    {
-        distance = Vector3.Distance(navAgent.destination, transform.position);
-
-        if (distance <= 3f)
-        {
-            navAgent.isStopped = true;
-            state = UnitState.Idle;
-        }
-    }
-
-    public void SetToWalk(Vector3 dest)
-    {
-        state = UnitState.Walk;
-
-        navAgent.SetDestination(dest);
-        navAgent.isStopped = false;
-    }
 
     public void InitiateCharID(int i)
     {
@@ -147,6 +62,7 @@ public class Worker : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject != targetStructure)
@@ -182,6 +98,15 @@ public class Worker : MonoBehaviour
             }
         }
     }
+
+    public void HideCharSkin()
+    {
+        foreach (GameObject obj in charSkin)
+        {
+            obj.SetActive(false);
+        }
+    }
+
     private void DisableAllTools()
     {
         for (int i = 0; i < tools.Length; i++)
