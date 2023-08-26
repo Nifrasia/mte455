@@ -43,6 +43,16 @@ public class WorkerController : MonoBehaviour
             case UnitState.Harvest:
                 anim.SetBool("isHarvest", true);
                 break;
+            case UnitState.AttackBuilding:
+            case UnitState.AttackUnit:
+                anim.SetBool("isAttack", true);
+                break;
+            case UnitState.Mining:
+                anim.SetBool("isMining", true);
+                break;
+            case UnitState.Dead:
+                anim.SetBool("isDead", true);
+                break;
         }
     }
     private void DisableAll()
