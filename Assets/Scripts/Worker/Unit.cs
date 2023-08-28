@@ -45,6 +45,9 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] protected int attackPower = 5;
     public int AttackPower { get { return attackPower; } set { attackPower = value; } }
 
+    [SerializeField] protected GameObject targetUnit;
+    public GameObject TargetUnit { get { return targetUnit; } set { targetUnit = value; } }
+
     //Timer
     [SerializeField] protected float CheckStateTimer = 0f;
     [SerializeField] protected float CheckStateTimeWait = 0.5f;
@@ -168,5 +171,45 @@ public abstract class Unit : MonoBehaviour
         float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0, angle, 0);
+    }
+    public void TakeDamage(int n)
+    {
+        hp -= n;
+        if (hp <= 0)
+            Destroy(gameObject);
+    }
+    protected void MoveToAttackUnit()
+    {
+        if (targetUnit == null)
+        {
+            state = UnitState.Idle;
+            navAgent.isStopped = true;
+            return;
+        }
+        else
+        {
+            navAgent.SetDestination(targetUnit.transform.position);
+            navAgent.isStopped = false;
+        }
+
+        distance = Vector3.Distance(transform.position, targetUnit.transform.position);
+
+        if (distance <= attackRange)
+            state = UnitState.AttackUnit;
+    }
+    protected void AttackUnit()
+    {
+        EquipWeapon();
+
+        if (navAgent != null)
+            navAgent.isStopped = true;
+
+        if (targetUnit != null)
+        {
+            LookAt(targetUnit.transform.position);
+
+            Unit u = targetUnit.GetComponent<Unit>();
+            u.TakeDamage(attackPower);
+        }
     }
 }
