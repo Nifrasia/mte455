@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 933418479}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
         m_MethodName: ToggleFarmPanel
         m_Mode: 1
@@ -6048,7 +6048,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 933418479}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
         m_MethodName: ToggleLaborPanel
         m_Mode: 1
@@ -7246,7 +7246,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 933418479}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
         m_MethodName: ToggleLaborPanel
         m_Mode: 1
