@@ -70,6 +70,7 @@ public abstract class Unit : MonoBehaviour
     void Update()
     {
         CheckStaffState();
+        CheckSelfDefence();
     }
 
     protected void CheckStaffState()
@@ -172,9 +173,11 @@ public abstract class Unit : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, angle, 0);
     }
-    public void TakeDamage(int n)
+    public void TakeDamage(Unit attacker)
     {
-        hp -= n;
+        CheckSelfDefence(attacker);
+
+        hp -= attacker.AttackPower;
         if (hp <= 0)
             Destroy(gameObject);
     }
@@ -209,7 +212,15 @@ public abstract class Unit : MonoBehaviour
             LookAt(targetUnit.transform.position);
 
             Unit u = targetUnit.GetComponent<Unit>();
-            u.TakeDamage(attackPower);
+            u.TakeDamage(this);
+        }
+    }
+    public void CheckSelfDefence(Unit u)
+    {
+        if (u.gameObject != null)
+        {
+            targetUnit = u.gameObject;
+            state = UnitState.MoveToAttackUnit;
         }
     }
 }
