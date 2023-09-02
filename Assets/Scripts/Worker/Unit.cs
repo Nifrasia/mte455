@@ -16,7 +16,10 @@ public enum UnitState
     AttackUnit,
     MoveToAttackBuilding,
     AttackBuilding,
+    MoveToMining,
     Mining,
+    MoveToDeliver,
+    Deliver,
     Dead
 }
 
@@ -67,7 +70,7 @@ public abstract class Unit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         CheckStaffState();
     }
@@ -186,6 +189,14 @@ public abstract class Unit : MonoBehaviour
         if (hp <= 0)
             Destroy(gameObject);
     }
+    public void TakeDamage(Turret attacker)
+    {
+        CheckSelfDefence(attacker);
+
+        hp -= attacker.ShootDamage;
+        if (hp <= 0)
+            Destroy(gameObject);
+    }
     protected void MoveToAttackUnit()
     {
         if (targetUnit == null)
@@ -227,6 +238,16 @@ public abstract class Unit : MonoBehaviour
         if (u.gameObject != null)
         {
             targetUnit = u.gameObject;
+            state = UnitState.MoveToAttackUnit;
+        }
+    }
+    public void CheckSelfDefence(Turret t)
+    {
+        EquipWeapon();
+
+        if (t.gameObject != null)
+        {
+            targetUnit = t.gameObject;
             state = UnitState.MoveToAttackUnit;
         }
     }

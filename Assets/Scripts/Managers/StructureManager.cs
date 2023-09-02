@@ -168,12 +168,23 @@ public class StructureManager : MonoBehaviour
                 case "Farm": // if we click Object with Farm tag
                     OpenFarmPanel();
                     break;
+                case "Warehouse": // if we click Object with Warehouse tag
+                    OpenWarehousePanel();
+                    break;
             }
         }
     }
     public void CallStaff()
     {
         Office.instance.SendStaff(CurStructure);
+        MainUI.instance.UpdateResourceUI();
+    }
+    public void CallWorker() //Call Worker in Warehouse Panel
+    {
+        GameObject mine = FindingTarget.CheckForNearestMine(CurStructure.transform.position,
+                                                                        100f,
+                                                                        "Mine");
+        Office.instance.SendWorkerToMine(mine, CurStructure);
         MainUI.instance.UpdateResourceUI();
     }
     private void Demolish()
@@ -303,4 +314,12 @@ public class StructureManager : MonoBehaviour
             ConstructRoad();
     }
     #endregion
+
+    public void OpenWarehousePanel()
+    {
+        string name = CurStructure.GetComponent<Building>().StructureName;
+
+        MainUI.instance.WarehouseNameText.text = name;
+        MainUI.instance.ToggleWarehousePanel();
+    }
 }
