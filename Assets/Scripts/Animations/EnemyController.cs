@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
                 anim.SetBool("isIdle", true);
                 break;
             case UnitState.Walk:
+            case UnitState.MoveToAttackUnit:
             case UnitState.MoveToAttackBuilding:
                 anim.SetBool("isWalk", true);
                 break;

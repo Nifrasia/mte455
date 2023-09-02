@@ -70,7 +70,6 @@ public abstract class Unit : MonoBehaviour
     void Update()
     {
         CheckStaffState();
-        CheckSelfDefence();
     }
 
     protected void CheckStaffState()
@@ -96,6 +95,12 @@ public abstract class Unit : MonoBehaviour
                 break;
             case UnitState.AttackBuilding:
                 AttackBuilding();
+                break;
+            case UnitState.AttackUnit:
+                AttackUnit();
+                break;
+            case UnitState.MoveToAttackUnit:
+                MoveToAttackUnit();
                 break;
         }
     }
@@ -217,6 +222,8 @@ public abstract class Unit : MonoBehaviour
     }
     public void CheckSelfDefence(Unit u)
     {
+        EquipWeapon();
+
         if (u.gameObject != null)
         {
             targetUnit = u.gameObject;
