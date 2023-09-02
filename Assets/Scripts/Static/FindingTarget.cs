@@ -44,7 +44,6 @@ public static class FindingTarget
         else
             return null;
     }
-
     // checks for nearest enemy building with a sphere cast
     public static Building CheckForNearestEnemyBuilding(Vector3 origin, float range, LayerMask layerMask, string tag)
     {
@@ -104,14 +103,14 @@ public static class FindingTarget
                 continue;
 
             //Debug.Log("Test - " + hits[x].collider.gameObject.ToString());
-            Building target = hits[x].collider.GetComponent<Building>();
+            Mine target = hits[x].collider.GetComponent<Mine>();
             float dist = Vector3.Distance(origin, hits[x].transform.position);
 
-            // skip if this is not a building
+            // skip if this is not a mine
             if (target == null)
                 continue;
 
-            // skip if it is any destroyed building
+            // skip if it is any destroyed mine
             if (target.HP <= 0)
                 continue;
             // if the closest is null or the distance is less than the closest distance it currently has

@@ -115,7 +115,7 @@ public class Worker : Unit
             }
         }
 
-        Mines mine = other.gameObject.GetComponent<Mines>();
+        Mine mine = other.gameObject.GetComponent<Mine>();
 
         if ((other.tag == "Mine") && (mine != null) && (mine.HP < 100))
         {
@@ -212,9 +212,9 @@ public class Worker : Unit
     }
     void MiningUpdate()
     {
-        Mines mine;
+        Mine mine;
         if (targetMine != null)
-            mine = targetMine.GetComponent<Mines>();
+            mine = targetMine.GetComponent<Mine>();
         else
         {
             GameObject newMine = FindingTarget.CheckForNearestMine(targetStructure.transform.position,
