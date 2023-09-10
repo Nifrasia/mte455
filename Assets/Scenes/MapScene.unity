@@ -1652,7 +1652,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 933418479}
         m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
         m_MethodName: ToggleFarmPanel
         m_Mode: 1
@@ -6717,7 +6717,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 933418479}
         m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
         m_MethodName: ToggleLaborPanel
         m_Mode: 1
@@ -7640,7 +7640,7 @@ GameObject:
   - component: {fileID: 1608906412}
   - component: {fileID: 1608906411}
   m_Layer: 5
-  m_Name: Stone
+  m_Name: Corn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8185,7 +8185,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 933418479}
         m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
         m_MethodName: ToggleLaborPanel
         m_Mode: 1
