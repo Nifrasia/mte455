@@ -254,7 +254,7 @@ public abstract class Unit : MonoBehaviour
             state = UnitState.MoveToAttackUnit;
         }
     }
-    public void S(UnitState s)
+    public void SetUnitState(UnitState s)
     {
         if (onStateChange != null) //if there is an icon
             onStateChange.Invoke(s);

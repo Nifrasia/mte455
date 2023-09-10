@@ -202,15 +202,14 @@ public class Worker : Unit
             StartMining(newMine);
         }
 
-        EquipTool(3); //Pickaxe
-
         DisableAllTools();
         //Equip PickAxe
+        EquipTool(3); //Pickaxe
 
         if (Vector3.Distance(transform.position, navAgent.destination) <= 1f)
         {
             LookAt(navAgent.destination);
-            state = UnitState.Mining;
+            SetUnitState(UnitState.Mining);
         }
     }
     void MiningUpdate()
@@ -228,10 +227,9 @@ public class Worker : Unit
             return;
         }
 
-        EquipTool(3); //Pickaxe
-
         DisableAllTools();
         //Equip PickAxe
+        EquipTool(3); //Pickaxe
 
         if (Time.time - timeLastDig > digRate)
         {
