@@ -86,12 +86,13 @@ public static class FindingTarget
             return null;
     }
     // checks for nearest mine with a sphere cast
-    public static Mine CheckForNearestMine(Vector3 origin, float range, LayerMask layerMask, string tag)
+    public static GameObject CheckForNearestMine(Vector3 origin, float range, string tag)
     {
         RaycastHit[] hits = Physics.SphereCastAll(origin,
                                                     range,
                                                     Vector3.up,
-                                                    layerMask);
+                                                    0f,
+                                                    LayerMask.GetMask("Mine"));
 
         GameObject closest = null;
         float closestDist = 0f;
@@ -110,7 +111,7 @@ public static class FindingTarget
             if (target == null)
                 continue;
 
-            // skip if it is any destroyed mine
+            // skip if it is any depleted mine
             if (target.HP <= 0)
                 continue;
             // if the closest is null or the distance is less than the closest distance it currently has
@@ -122,7 +123,7 @@ public static class FindingTarget
         }
 
         if (closest != null)
-            return closest.GetComponent<Mine>();
+            return closest;
         else
             return null;
     }

@@ -131,6 +131,7 @@ public class Worker : Unit
                 MoveToMiningUpdate();
                 break;
             case UnitState.Mining:
+                EquipTool(3); //Pickaxe
                 MiningUpdate();
                 break;
             case UnitState.MoveToDeliver:
@@ -201,6 +202,8 @@ public class Worker : Unit
             StartMining(newMine);
         }
 
+        EquipTool(3); //Pickaxe
+
         DisableAllTools();
         //Equip PickAxe
 
@@ -224,6 +227,9 @@ public class Worker : Unit
             StartMining(newMine);
             return;
         }
+
+        EquipTool(3); //Pickaxe
+
         DisableAllTools();
         //Equip PickAxe
 
@@ -297,6 +303,5 @@ public class Worker : Unit
             }
         }
     }
-
     #endregion
 }

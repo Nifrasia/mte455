@@ -151,6 +151,13 @@ public class StructureManager : MonoBehaviour
         MainUI.instance.FarmNameText.text = name;
         MainUI.instance.ToggleFarmPanel();
     }
+    public void OpenWarehousePanel()
+    {
+        string name = CurStructure.GetComponent<Warehouse>().StructureName;
+
+        MainUI.instance.WarehouseNameText.text = name;
+        MainUI.instance.ToggleWarehousePanel();
+    }
     private void CheckOpenPanel()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -182,7 +189,7 @@ public class StructureManager : MonoBehaviour
     public void CallWorker() //Call Worker in Warehouse Panel
     {
         GameObject mine = FindingTarget.CheckForNearestMine(CurStructure.transform.position,
-                                                                        100f, mineLayerMask,
+                                                                        100f,
                                                                         "Mine");
         Office.instance.SendWorkerToMine(mine, CurStructure);
         MainUI.instance.UpdateResourceUI();
@@ -314,12 +321,4 @@ public class StructureManager : MonoBehaviour
             ConstructRoad();
     }
     #endregion
-
-    public void OpenWarehousePanel()
-    {
-        string name = CurStructure.GetComponent<Building>().StructureName;
-
-        MainUI.instance.WarehouseNameText.text = name;
-        MainUI.instance.ToggleWarehousePanel();
-    }
 }

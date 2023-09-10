@@ -59,6 +59,7 @@ MonoBehaviour:
   costToBuild: 900
   id: 4
   isHousing: 0
+  isWarehouse: 0
 --- !u!114 &6747000226629469765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f25cc3eceaf6f1408081412f8e31be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheel: {fileID: 2042958616183305698}
+  wheel: {fileID: 2042597941914550902}
 --- !u!1 &5944043405201314418
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,9 +292,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4959979268377148, guid: 2c837521d4253d74f844a10fd29446ef, type: 3}
   m_PrefabInstance: {fileID: 2043677724088594322}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2042958616183305698 stripped
+--- !u!1 &2042597941914550902 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1853804450421360, guid: 2c837521d4253d74f844a10fd29446ef, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1229315764071908, guid: 2c837521d4253d74f844a10fd29446ef, type: 3}
   m_PrefabInstance: {fileID: 2043677724088594322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3418594996523634766
