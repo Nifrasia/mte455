@@ -26,7 +26,7 @@ public class Enemy : Unit
 
         Structure s = other.gameObject.GetComponent<Structure>();
         if ((s != null) && (s.HP > 0))
-            state = UnitState.AttackBuilding;
+            SetUnitState(UnitState.AttackBuilding);
     }
     private void CheckForAttack()
     {

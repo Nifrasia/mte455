@@ -94,22 +94,22 @@ public class Worker : Unit
             switch (farm.Stage)
             {
                 case FarmStage.plowing:
-                    state = UnitState.Plow;
+                    SetUnitState(UnitState.Plow);
                     EquipTool(0); //Hoe
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.sowing:
-                    state = UnitState.Sow;
+                    SetUnitState(UnitState.Sow);
                     EquipTool(1); //Sack
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.maintaining:
-                    state = UnitState.Water;
+                    SetUnitState(UnitState.Water);
                     EquipTool(2); //Watering Can
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.harvesting:
-                    state = UnitState.Harvest;
+                    SetUnitState(UnitState.Harvest);
                     farm.CheckTimeForWork();
                     break;
             }
@@ -120,7 +120,7 @@ public class Worker : Unit
         if ((other.tag == "Mine") && (mine != null) && (mine.HP < 100))
         {
             LookAt(targetMine.transform.position);
-            state = UnitState.Mining;
+            SetUnitState(UnitState.Mining);
         }
     }
     private void CheckWorkerState()
