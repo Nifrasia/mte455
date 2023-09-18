@@ -15,6 +15,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] private TMP_Text appleText;
 
     [SerializeField] private TMP_Text dayText;
+    [SerializeField] private TMP_Text seasonText;
 
     public GameObject laborMarketPanel;
     public GameObject farmPanel;
@@ -75,7 +76,7 @@ public class MainUI : MonoBehaviour
     }
     public void UpdateDayText()
     {
-        dayText.text = GameManager.instance.Day.ToString() + "Days";
+        dayText.text = "Day" + GameManager.instance.Day.ToString();
     }
 
     public void ToggleTechPanel()

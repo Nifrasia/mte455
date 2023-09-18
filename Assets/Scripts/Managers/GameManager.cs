@@ -19,10 +19,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private int day = 0;
+    [SerializeField] private string season;
     public int Day { get { return day; } set { day = value; } }
 
     [SerializeField] private float dayTimer = 0f;
-    [SerializeField] private float secondsPerDay = 5f;
+    [SerializeField] private float secondsPerDay = 3f;
 
     private void Awake()
     {
@@ -39,6 +40,14 @@ public class GameManager : MonoBehaviour
             MainUI.instance.UpdateDayText();
             TechManager.instance.CheckAllResearch();
             MainUI.instance.UpdateTechBtns();
+        }
+    }
+
+    private void CheckTimeForSeason()
+    {
+        if (day == 15)
+        {
+
         }
     }
 }

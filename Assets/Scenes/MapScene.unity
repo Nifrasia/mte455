@@ -3671,7 +3671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1652014080, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
+  m_Sprite: {fileID: 1361092453, guid: 577ba69175ea1f444855c4bae5c0638a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4580,6 +4580,7 @@ MonoBehaviour:
   woodText: {fileID: 2039682773}
   appleText: {fileID: 104307365}
   dayText: {fileID: 610318846}
+  seasonText: {fileID: 0}
   laborMarketPanel: {fileID: 1362688728}
   farmPanel: {fileID: 254573995}
   warehousePanel: {fileID: 1618042957}
@@ -8531,6 +8532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   day: 0
+  season: 
   dayTimer: 0
   secondsPerDay: 5
 --- !u!114 &1579079771
@@ -8680,7 +8682,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -50.699997}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1608906409
 GameObject:
