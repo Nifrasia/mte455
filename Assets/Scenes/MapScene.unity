@@ -3699,6 +3699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827605296}
   - component: {fileID: 827605297}
+  - component: {fileID: 827605298}
   m_Layer: 0
   m_Name: Office
   m_TagString: Untagged
@@ -3744,6 +3745,7 @@ MonoBehaviour:
   milk: 0
   apple: 0
   stone: 0
+  wood: 0
   dailyCostWages: 0
   structures: []
   availStaff: 0
@@ -3752,6 +3754,23 @@ MonoBehaviour:
   rallyPosition: {fileID: 1614147339}
   unitLimit: 3
   housingUnitNum: 6
+--- !u!114 &827605298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827605295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: addc1b5b259bb9a41a74c8ae38c762c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  techSet: []
+  techSOs:
+  - {fileID: 11400000, guid: 3e9753b8b78b1604c8a2ba9eebbd4ece, type: 2}
+  - {fileID: 11400000, guid: a2bf1bef091ac4d4db6634981c9df903, type: 2}
+  - {fileID: 11400000, guid: 0b939f48ff560d34c916ca29641d90c8, type: 2}
 --- !u!1 &832409893
 GameObject:
   m_ObjectHideFlags: 0
