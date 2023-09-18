@@ -30,13 +30,15 @@ public class GameManager : MonoBehaviour
     }
     private void CheckTimeForDay()
     {
-        dayTimer = Time.deltaTime;
+        dayTimer += Time.deltaTime;
 
         if (dayTimer > secondsPerDay)
         {
             dayTimer = 0f;
             day++;
             MainUI.instance.UpdateDayText();
+            TechManager.instance.CheckAllResearch();
+            MainUI.instance.UpdateTechBtns();
         }
     }
 }

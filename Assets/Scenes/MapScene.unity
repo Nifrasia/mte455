@@ -3143,7 +3143,7 @@ GameObject:
   - component: {fileID: 630104887}
   - component: {fileID: 630104886}
   m_Layer: 5
-  m_Name: MIlk
+  m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4148,8 +4148,8 @@ MonoBehaviour:
   corn: 0
   milk: 0
   apple: 0
-  stone: 0
-  wood: 0
+  stone: 10000
+  wood: 10000
   dailyCostWages: 0
   structures: []
   availStaff: 0
@@ -4576,8 +4576,8 @@ MonoBehaviour:
   staffText: {fileID: 1147191631}
   wheatText: {fileID: 1006522779}
   melonText: {fileID: 262306148}
-  cornText: {fileID: 649870711}
-  milkText: {fileID: 2039682773}
+  stoneText: {fileID: 649870711}
+  woodText: {fileID: 2039682773}
   appleText: {fileID: 104307365}
   dayText: {fileID: 610318846}
   laborMarketPanel: {fileID: 1362688728}
@@ -5145,7 +5145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81, y: 85}
+  m_AnchoredPosition: {x: 76, y: 85}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056233591
@@ -5838,7 +5838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -836555939, guid: 9e48fbaf90af4ef41bea162252ea8369, type: 3}
+  m_Sprite: {fileID: -803796035, guid: 8ef1793d5b9334049ad4a7ecddf8aaaf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7182,7 +7182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -191, y: -46}
+  m_AnchoredPosition: {x: -230.5, y: -24}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270192653
@@ -8011,14 +8011,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495026105}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.43, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 827605296}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1504878220
 GameObject:
   m_ObjectHideFlags: 0
@@ -8694,7 +8694,7 @@ GameObject:
   - component: {fileID: 1608906412}
   - component: {fileID: 1608906411}
   m_Layer: 5
-  m_Name: Corn
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9059,14 +9059,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661528911}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.88, y: 0, z: -6.89}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1974518467}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1693072557
 GameObject:
   m_ObjectHideFlags: 0
@@ -10234,7 +10234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204, y: -130}
+  m_AnchoredPosition: {x: 175, y: -123}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962221860
@@ -10866,7 +10866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e7ef540293cdce64ca4600b15639f1f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fadf1500b2095844a72fcd77c096a82, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -10,8 +10,8 @@ public class MainUI : MonoBehaviour
     [SerializeField] private TMP_Text staffText;
     [SerializeField] private TMP_Text wheatText;
     [SerializeField] private TMP_Text melonText;
-    [SerializeField] private TMP_Text cornText;
-    [SerializeField] private TMP_Text milkText;
+    [SerializeField] private TMP_Text stoneText;
+    [SerializeField] private TMP_Text woodText;
     [SerializeField] private TMP_Text appleText;
 
     [SerializeField] private TMP_Text dayText;
@@ -48,8 +48,8 @@ public class MainUI : MonoBehaviour
         staffText.text = Office.instance.Workers.Count.ToString() + " / " + Office.instance.UnitLimit.ToString();
         wheatText.text = Office.instance.Wheat.ToString();
         melonText.text = Office.instance.Melon.ToString();
-        cornText.text = Office.instance.Corn.ToString();
-        milkText.text = Office.instance.Milk.ToString();
+        stoneText.text = Office.instance.Stone.ToString();
+        woodText.text = Office.instance.Wood.ToString();
         appleText.text = Office.instance.Apple.ToString();
     }
     public void ToggleLaborPanel()
@@ -75,7 +75,7 @@ public class MainUI : MonoBehaviour
     }
     public void UpdateDayText()
     {
-        dayText.text = GameManager.instance.Day.ToString();
+        dayText.text = GameManager.instance.Day.ToString() + "Days";
     }
 
     public void ToggleTechPanel()
