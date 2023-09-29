@@ -20,6 +20,8 @@ public class MainUI : MonoBehaviour
     public GameObject laborMarketPanel;
     public GameObject farmPanel;
     public GameObject warehousePanel;
+    public GameObject settingPanel;
+    public GameObject saveslotPanel;
 
     [SerializeField] private TMP_Text farmNameText;
     public TMP_Text FarmNameText { get { return farmNameText; } set { farmNameText = value; } }
@@ -73,6 +75,20 @@ public class MainUI : MonoBehaviour
             warehousePanel.SetActive(true);
         else
             warehousePanel.SetActive(false);
+    }
+    public void ToggleSettingPanel()
+    {
+        if (!settingPanel.activeInHierarchy)
+            settingPanel.SetActive(true);
+        else
+            settingPanel.SetActive(false);
+    }
+    public void ToggleSaveSlotPanel()
+    {
+        if (!saveslotPanel.activeInHierarchy)
+            saveslotPanel.SetActive(true);
+        else
+            saveslotPanel.SetActive(false);
     }
     public void UpdateDayText()
     {
